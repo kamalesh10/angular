@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8  px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fblogs.icrc.org%2Fnew-delhi%2Fwp-content%2Fuploads%2Fsites%2F93%2F2020%2F04%2FCOVID_Poster_Inclusive_PWDs_small-701x1024.jpg&imgrefurl=https%3A%2F%2Fblogs.icrc.org%2Fnew-delhi%2F2020%2F04%2F17%2Fcovid-19-safety-measures-for-persons-with-disabilities%2F&tbnid=ZU4mWc-PPwSynM&vet=12ahUKEwiy7v6PiJ_pAhWDSysKHUTqBPUQMygAegUIARC7AQ..i&docid=6WeP0s6tIS-INM&w=701&h=1024&q=covid%2019%20safety%20measures%20for%20individuals&ved=2ahUKEwiy7v6PiJ_pAhWDSysKHUTqBPUQMygAegUIARC7AQ" allowfullscreen></iframe>
+  </div>
+
+<div>
+<table class  >
+<thead>
+
+      <th>CATEGORY </th>
+      <th> CITY </th>
+      <th>WEBSITE </th>
+      <th>NAME OF THE ORGANIZATION</th>
+      <th>PHONE NO  </th>
+      <th>STATE </th>
+
+  </thead>
+  <tbody>
+    <tr *ngFor = "let resource of resources">
+    <td>{{resource.category}}</td>
+    <td>{{resource.city}}</td>
+    <td><a href="{{resource.contact}}">{{resource.contact}}</a></td>
+    <td>{{resource.nameoftheorganisation}}</td>
+    <td><a href = "tel : {{resource.phonenumber}}">{{resource.phonenumber}}</a></td>
+    <td>{{resource.state}}</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div>
+</body>
+</html>
